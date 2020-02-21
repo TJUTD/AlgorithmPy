@@ -300,3 +300,77 @@ class OrderedList:
 # print(l.index(100))
 # print(l.pop(1))
 # print(l.pop())
+
+class HashTable:
+    def __init__(self, sz=11, skip=1):
+        self.size = sz
+        self.slots = [None] * self.size
+        self.data = [None] * self.size
+        self.skip = skip
+
+    def put(self, key, data):
+        hash_val = self.hash_fun(key, self.size)
+
+        if self.slots[hash_val] == None:
+            self.slots[hash_val] = key
+            self.data[hash_val] = data
+        else:
+            if self.slots[hash_val] == key:
+                self.data[hash_val] = data
+            else:
+                next_slot = self.rehash(hash_val, self.size, self.skip)
+                while self.slots[next_slot] != None and self.slots[next_slot] != key:
+                    next_slot = self.rehash(next_slot, self.size, self.skip)
+                if self.slots[next_slot] == None:
+                    self.slots[next_slot] = key
+                    self.data[next_slot] = data
+                else:
+                    self.data[next_slot] = data
+
+    def get(self, key):
+        start_slot = self.hash_fun(key, self.size)
+        data = None
+        stop = False
+        found = False
+        pos = start_slot
+
+        while self.slots[pos] != None and not found and not stop:
+            if self.slots[pos] == key:
+                found =True
+                data = self.data[pos]
+            else:
+                pos = self.rehash(pos, self.size, self.skip)
+                if pos == start_slot:
+                    stop = True
+        return data
+
+    def __getitem__(self, key):
+        return self.get(key)
+
+    def __setitem__(self, key, value):
+        self.put(key, value)
+
+    def hash_fun(self, key, size):
+        return key % size
+
+    def rehash(self, old_hash, size, skip):
+        return (old_hash + skip) % size
+
+
+h = HashTable()
+h[54] = "a"
+h[26] = "b"
+h[93] = "c"
+h[17] = "d"
+h[77] = "e"
+h[31] = "f"
+h[44] = "g"
+h[55] = "h"
+h[20] = "i"
+print(h.slots)
+print(h.data)
+h[20] = "j"
+print(h[20])
+print(h.data)
+
+
