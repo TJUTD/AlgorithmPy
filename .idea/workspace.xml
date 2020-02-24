@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f47367e1-4e4f-4d36-9324-e17581f09859" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/maze.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sort.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataStructure.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisualizeRecursion.py" beforeDir="false" afterPath="$PROJECT_DIR$/VisualizeRecursion.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Python.DataStructure">
+  <component name="RunManager" selected="Python.sort">
     <configuration name="DataStructure" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AlgorithmPy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -48,27 +45,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataStructure.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="PalindromeChecker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AlgorithmPy" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PalindromeChecker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,13 +116,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AlgorithmPy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sort.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sort" />
         <item itemvalue="Python.DataStructure" />
         <item itemvalue="Python.search" />
         <item itemvalue="Python.maze" />
         <item itemvalue="Python.VisualizeRecursion" />
-        <item itemvalue="Python.PalindromeChecker" />
       </list>
     </recent_temporary>
   </component>
@@ -176,26 +173,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1419" height="273" key="GridCell.Tab.0.bottom" timestamp="1582259736618">
+    <state width="1402" height="223" key="GridCell.Tab.0.bottom" timestamp="1582502943256">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1578190122468" />
-    <state width="1419" height="273" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1582259736618" />
-    <state width="1419" height="273" key="GridCell.Tab.0.center" timestamp="1582259736617">
+    <state width="1402" height="223" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1582502943256" />
+    <state width="1402" height="223" key="GridCell.Tab.0.center" timestamp="1582502943256">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1578190122468" />
-    <state width="1419" height="273" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1582259736617" />
-    <state width="1419" height="273" key="GridCell.Tab.0.left" timestamp="1582259736617">
+    <state width="1402" height="223" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1582502943256" />
+    <state width="1402" height="223" key="GridCell.Tab.0.left" timestamp="1582502943256">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1578190122467" />
-    <state width="1419" height="273" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1582259736617" />
-    <state width="1419" height="273" key="GridCell.Tab.0.right" timestamp="1582259736617">
+    <state width="1402" height="223" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1582502943256" />
+    <state width="1402" height="223" key="GridCell.Tab.0.right" timestamp="1582502943256">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1578190122468" />
-    <state width="1419" height="273" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1582259736617" />
+    <state width="1402" height="223" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1582502943256" />
     <state width="1419" height="273" key="GridCell.Tab.1.bottom" timestamp="1582259736618">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -212,13 +209,13 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1419" height="273" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1582259736618" />
-    <state x="416" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1582243012496">
+    <state x="416" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1582491119832">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="416" y="255" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1582243012496" />
-    <state x="383" y="180" key="search.everywhere.popup" timestamp="1581909221898">
+    <state x="416" y="255" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1582491119832" />
+    <state x="383" y="180" key="search.everywhere.popup" timestamp="1582502385725">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="383" y="180" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1581909221898" />
+    <state x="383" y="180" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1582502385725" />
   </component>
 </project>
