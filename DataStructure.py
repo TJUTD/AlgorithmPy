@@ -357,20 +357,185 @@ class HashTable:
         return (old_hash + skip) % size
 
 
-h = HashTable()
-h[54] = "a"
-h[26] = "b"
-h[93] = "c"
-h[17] = "d"
-h[77] = "e"
-h[31] = "f"
-h[44] = "g"
-h[55] = "h"
-h[20] = "i"
-print(h.slots)
-print(h.data)
-h[20] = "j"
-print(h[20])
-print(h.data)
+# h = HashTable()
+# h[54] = "a"
+# h[26] = "b"
+# h[93] = "c"
+# h[17] = "d"
+# h[77] = "e"
+# h[31] = "f"
+# h[44] = "g"
+# h[55] = "h"
+# h[20] = "i"
+# print(h.slots)
+# print(h.data)
+# h[20] = "j"
+# print(h[20])
+# print(h.data)
 
 
+def binary_tree(r):
+    return [r, [], []]
+
+def insert_left(root, leaf):
+    lc = root.pop(1)
+    if len(lc) > 1:
+        root.insert(1, [leaf, lc, []])
+    else:
+        root.insert(1, [leaf, [], []])
+
+def insert_right(root, leaf):
+    rc = root.pop(2)
+    if len(rc) > 1:
+        root.insert(2, [leaf, [], rc])
+    else:
+        root.insert(2, [leaf, [], []])
+
+def get_root_val(root):
+    return root[0]
+
+def set_root_val(root, val):
+    root[0] = val
+
+def get_left_child(root):
+    return root[1]
+
+def get_right_child(root):
+    return root[2]
+
+# r = binary_tree(5)
+# insert_left(r, 1)
+# insert_left(r, 2)
+# insert_right(r, 6)
+# insert_right(get_left_child(r), 3)
+# print(r)
+
+class BinaryTree:
+    def __init__(self, root):
+        self.key = root
+        self.left_child = None
+        self.right_child = None
+
+    def insert_left(self, val):
+        if self.left_child == None:
+            self.left_child = BinaryTree(val)
+        else:
+            tmp = BinaryTree(val)
+            tmp.left_child = self.left_child
+            self.left_child = tmp
+
+    def insert_right(self, val):
+        if self.right_child == None:
+            self.right_child = BinaryTree(val)
+        else:
+            tmp = BinaryTree(val)
+            tmp.right_child = self.right_child
+            self.right_child = tmp
+
+    def get_root_val(self):
+        return self.key
+
+    def set_root_val(self, val):
+        self.key = val
+
+    def get_left_child(self):
+        return self.left_child
+
+    def get_right_child(self):
+        return self.right_child
+
+
+# def preorder(tree):
+#     if tree:
+#         print(tree.get_root_val())
+#         preorder(tree.get_left_child())
+#         preorder(tree.get_right_child())
+#
+# def inorder(tree):
+#     if tree:
+#         inorder(tree.get_left_child())
+#         print(tree.get_root_val())
+#         inorder(tree.get_right_child())
+#
+# def postorder(tree):
+#     if tree:
+#         postorder(tree.get_left_child())
+#         postorder(tree.get_right_child())
+#         print(tree.get_root_val())
+
+# t = BinaryTree('a')
+# t.insert_left('b')
+# t.insert_right('c')
+# print(t.get_root_val())
+# print(t.get_left_child().get_root_val())
+# print(t.get_right_child().get_root_val())
+# preorder(t)
+# inorder(t)
+# postorder(t)
+
+class BinaryHeap:
+    def __init__(self):
+        self.heap_list = [0]
+        self.size = 0
+
+    def perc_up(self, i):
+        while i // 2 > 0:
+            if self.heap_list[i] < self.heap_list[i//2]:
+                self.heap_list[i], self.heap_list[i // 2] = self.heap_list[i//2], self.heap_list[i]
+            i = i // 2
+
+    def insert(self, k):
+        self.heap_list.append(k)
+        self.size += 1
+        self.perc_up(self.size)
+
+    def min_child(self, i):
+        if i * 2 + 1 > self.size:
+            return i * 2
+        else:
+            if self.heap_list[i*2] < self.heap_list[i*2+1]:
+                return i * 2
+            else:
+                return i * 2 + 1
+
+    def perc_down(self, i):
+        while i*2 <= self.size:
+            mc = self.min_child(i)
+            if self.heap_list[i] > self.heap_list[mc]:
+                self.heap_list[i], self.heap_list[mc] = self.heap_list[mc], self.heap_list[i]
+            i = mc
+
+    def del_min(self):
+        val = self.heap_list[1]
+        self.heap_list[1] = self.heap_list[self.size]
+        self.size -= 1
+        self.heap_list.pop()
+        self.perc_down(1)
+        return val
+
+    def build_heap(self, lst):
+        i = len(lst) // 2
+        self.size = len(lst)
+        self.heap_list = [0] + lst[:]
+        while i > 0:
+            self.perc_down(i)
+            i -= 1
+
+# bh = BinaryHeap()
+# bh.insert(5)
+# bh.insert(4)
+# bh.insert(3)
+# bh.insert(2)
+# bh.insert(1)
+# print(bh.del_min())
+# print(bh.del_min())
+# print(bh.del_min())
+# print(bh.del_min())
+# print(bh.del_min())
+# bh = BinaryHeap()
+# bh.build_heap([9,7,5,3,1])
+# print(bh.del_min())
+# print(bh.del_min())
+# print(bh.del_min())
+# print(bh.del_min())
+# print(bh.del_min())
